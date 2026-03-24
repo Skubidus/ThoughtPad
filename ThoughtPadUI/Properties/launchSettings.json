@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "ThoughtPadUI (Package)": {
+      "commandName": "MsixPackage"
+    },
+    "ThoughtPadUI (Unpackaged)": {
+      "commandName": "Project"
+    }
+  }
+}
