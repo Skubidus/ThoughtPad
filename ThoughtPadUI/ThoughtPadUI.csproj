@@ -63,4 +63,7 @@
   <ItemGroup>
     <None Include="D:\Coding\C#\ThoughtPad\ThoughtPadUI\.editorconfig" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ThoughtPadLibrary\ThoughtPadLibrary.csproj" />
+  </ItemGroup>
 </Project>
