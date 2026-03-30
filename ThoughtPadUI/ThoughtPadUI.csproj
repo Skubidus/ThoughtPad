@@ -61,9 +61,17 @@
     <EditorConfigFiles Remove="D:\Coding\C#\ThoughtPad\ThoughtPadUI\.editorconfig" />
   </ItemGroup>
   <ItemGroup>
+    <None Remove="Pages\MainPage.xaml" />
+  </ItemGroup>
+  <ItemGroup>
     <None Include="D:\Coding\C#\ThoughtPad\ThoughtPadUI\.editorconfig" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\ThoughtPadLibrary\ThoughtPadLibrary.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <Page Update="Pages\MainPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
 </Project>

@@ -1,19 +1,8 @@
 using Microsoft.UI.Xaml;
-using Microsoft.UI.Xaml.Controls;
-using Microsoft.UI.Xaml.Controls.Primitives;
-using Microsoft.UI.Xaml.Data;
-using Microsoft.UI.Xaml.Input;
-using Microsoft.UI.Xaml.Media;
-using Microsoft.UI.Xaml.Navigation;
 
-using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
-using System.Runtime.InteropServices.WindowsRuntime;
+using Microsoft.UI.Windowing;
 
-using Windows.Foundation;
-using Windows.Foundation.Collections;
+using Windows.UI;
 
 // To learn more about WinUI, the WinUI project structure,
 // and more about our project templates, see: http://aka.ms/winui-project-info.
@@ -28,6 +17,32 @@ namespace ThoughtPadUI
         public MainWindow()
         {
             InitializeComponent();
+
+            SetTitleBarTheme();
+
+            RootFrame.Navigate(typeof(Pages.MainPage));
+        }
+
+
+        private void SetTitleBarTheme()
+        {
+            var hwnd = WinRT.Interop.WindowNative.GetWindowHandle(this);
+            var windowId = Microsoft.UI.Win32Interop.GetWindowIdFromWindow(hwnd);
+            var appWindow = AppWindow.GetFromWindowId(windowId);
+
+            if (appWindow.TitleBar is not null)
+            {
+                var dark = Color.FromArgb(255, 32, 32, 32);
+                var white = Color.FromArgb(255, 255, 255, 255);
+
+                appWindow.TitleBar.BackgroundColor = dark;
+                appWindow.TitleBar.ForegroundColor = white;
+
+                appWindow.TitleBar.ButtonBackgroundColor = dark;
+                appWindow.TitleBar.ButtonForegroundColor = white;
+
+                appWindow.TitleBar.ButtonHoverBackgroundColor = Color.FromArgb(255, 50, 50, 50);
+            }
         }
     }
 }
