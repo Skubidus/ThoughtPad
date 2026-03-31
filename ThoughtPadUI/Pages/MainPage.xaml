@@ -8,8 +8,9 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
 
-    
     <Grid>
         <TextBlock Text="MainPage Test Text" />
+
+        <Button x:Name="TestButton" Content="Click Me" Click="TestButton_Click" />
     </Grid>
 </Page>

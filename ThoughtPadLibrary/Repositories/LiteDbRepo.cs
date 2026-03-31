@@ -23,7 +23,7 @@ internal class LiteDbRepo : ILiteDbRepo, IDisposable
 
     }
 
-    public Task CreateEntryAsync(EntryModel entry)
+    public Task<bool> CreateEntryAsync(EntryModel entry)
     {
         throw new NotImplementedException();
     }
@@ -48,12 +48,12 @@ internal class LiteDbRepo : ILiteDbRepo, IDisposable
         throw new NotImplementedException();
     }
 
-    public Task UpdateEntryAsync(EntryModel entry)
+    public Task<bool> UpdateEntryAsync(EntryModel entry)
     {
         throw new NotImplementedException();
     }
 
-    public Task DeleteEntryAsync(int id)
+    public Task<bool> DeleteEntryAsync(int id)
     {
         throw new NotImplementedException();
     }

@@ -28,6 +28,8 @@ namespace ThoughtPadUI
     /// </summary>
     public partial class App : Application
     {
+        public static Window MainWindow => ((App)Current)._window!;
+
         private Window? _window;
 
         /// <summary>
